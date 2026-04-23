@@ -1,0 +1,11 @@
+Model Information:
+* title:	Portal Cube
+* source:	https://sketchfab.com/3d-models/portal-cube-e669d0ed64b54c879b6a0372fcb04211
+* author:	PapaPvP (https://sketchfab.com/PapaPvP)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Portal Cube" (https://sketchfab.com/3d-models/portal-cube-e669d0ed64b54c879b6a0372fcb04211) by PapaPvP (https://sketchfab.com/PapaPvP) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

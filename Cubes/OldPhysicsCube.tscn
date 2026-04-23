@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cdk4igsxplot2"]
+
+[ext_resource type="PackedScene" uid="uid://dkve5wxkbjs8l" path="res://Cubes/old_basic_cube/scene.gltf" id="1_r0kwo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k0eoe"]
+size = Vector3(1.9354248, 1.8762207, 1.8743286)
+
+[node name="OldBasicCube" type="RigidBody3D" unique_id=1382317070]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mass = 50.0
+gravity_scale = 3.0
+
+[node name="Model" parent="." unique_id=2117954542 instance=ExtResource("1_r0kwo")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1794194522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011551142, -0.013288736, 0.0040386915)
+shape = SubResource("BoxShape3D_k0eoe")

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://teamsee4o4u1"]
+
+[ext_resource type="PackedScene" uid="uid://b3rr48hpn721d" path="res://Cubes/basic_cube/scene.gltf" id="1_54y42"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_en6lf"]
+size = Vector3(4.7949524, 4.7177124, 4.775879)
+
+[node name="BasicPhysicsCube" type="RigidBody3D" unique_id=202731667]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mass = 50.0
+gravity_scale = 3.0
+
+[node name="Model" parent="." unique_id=385424354 instance=ExtResource("1_54y42")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1969469520]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.00995636, -0.0071258545, -0.020385742)
+shape = SubResource("BoxShape3D_en6lf")

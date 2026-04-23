@@ -1,0 +1,11 @@
+Model Information:
+* title:	StarWars Empire Crate Cube Small [Free download]
+* source:	https://sketchfab.com/3d-models/starwars-empire-crate-cube-small-free-download-17f4eb0096904db798571e8e73fcea23
+* author:	ToLoss (https://sketchfab.com/lossgraph)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "StarWars Empire Crate Cube Small [Free download]" (https://sketchfab.com/3d-models/starwars-empire-crate-cube-small-free-download-17f4eb0096904db798571e8e73fcea23) by ToLoss (https://sketchfab.com/lossgraph) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	MoYu Unicorn Cube
+* source:	https://sketchfab.com/3d-models/moyu-unicorn-cube-fcdd7664540640beab93bf0851a81879
+* author:	SonnyG1 (https://sketchfab.com/SonnyG1)
+
+Model License:
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "MoYu Unicorn Cube" (https://sketchfab.com/3d-models/moyu-unicorn-cube-fcdd7664540640beab93bf0851a81879) by SonnyG1 (https://sketchfab.com/SonnyG1) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)

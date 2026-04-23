@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b5igoixbcldgi"]
+
+[ext_resource type="PackedScene" uid="uid://b8kp8j2bvvaiq" path="res://Cubes/filling_cube/scene.gltf" id="1_wilif"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4rqhv"]
+size = Vector3(202.46948, 201.48233, 193.99008)
+
+[node name="BuildingBlock1" type="StaticBody3D" unique_id=1908759507 groups=["buildable"]]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="Model" parent="." unique_id=1080574966 instance=ExtResource("1_wilif")]
+transform = Transform3D(21.5, 0, 0, 0, 21.5, 0, 0, 0, 21.5, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1364610339]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 0, 0, 0)
+shape = SubResource("BoxShape3D_4rqhv")

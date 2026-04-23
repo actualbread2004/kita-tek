@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://78m85d3aguct"]
+
+[ext_resource type="PackedScene" uid="uid://bfc5unpyfeoge" path="res://TestingRoom/scene.gltf" id="1_wbfu4"]
+[ext_resource type="PackedScene" uid="uid://dqwn6c8itr4x8" path="res://PlayerAssets/Player.tscn" id="2_xkndl"]
+[ext_resource type="PackedScene" uid="uid://c6gja684cwy3v" path="res://Cubes/spatial_cube/scene.gltf" id="3_u44n3"]
+[ext_resource type="PackedScene" uid="uid://dkhqt6j1eoaq2" path="res://Cubes/cube_key_hole/scene.gltf" id="4_sb48q"]
+[ext_resource type="PackedScene" uid="uid://cdk4igsxplot2" path="res://Cubes/OldPhysicsCube.tscn" id="5_t88pq"]
+
+[sub_resource type="MeshTexture" id="MeshTexture_xkndl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sb48q"]
+normal_enabled = true
+normal_texture = SubResource("MeshTexture_xkndl")
+
+[node name="Node3D" type="Node3D" unique_id=2108783288]
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1179303176]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 208.5274, -18.04728)
+layers = 1023
+light_color = Color(0.39836255, 0.5675967, 0.58763933, 1)
+light_energy = 6.0
+light_indirect_energy = 2.0
+
+[node name="TestingRoom" parent="." unique_id=2012575106 instance=ExtResource("1_wbfu4")]
+
+[node name="InvisFloor" type="CSGBox3D" parent="TestingRoom" unique_id=1957360959]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1834106, 3.6792333, 1.4136047)
+material_override = SubResource("StandardMaterial3D_sb48q")
+use_collision = true
+collision_layer = 65535
+size = Vector3(1111.8125, 0.60510254, 1094.1523)
+
+[node name="CharacterBody3D" parent="." unique_id=1413380376 instance=ExtResource("2_xkndl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84.728455, 65.705635, 244.87477)
+
+[node name="Sketchfab_Scene" parent="." unique_id=1962508906 instance=ExtResource("3_u44n3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.49866, 152.18242, 12.815475)
+
+[node name="Sketchfab_Scene2" parent="." unique_id=1636547829 instance=ExtResource("4_sb48q")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 87.84745, 81.39475, -132.62627)
+
+[node name="OldBasicCube" parent="." unique_id=1382317070 instance=ExtResource("5_t88pq")]
+transform = Transform3D(10.075, 0, 0, 0, 10.075, 0, 0, 0, 10.075, -230.31232, 58.489685, -11.555096)
