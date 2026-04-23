@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://dqwn6c8itr4x8"]
+
+[ext_resource type="Script" uid="uid://dc52ggfm675qy" path="res://PlayerAssets/player.gd" id="1_kpjcp"]
+[ext_resource type="PackedScene" uid="uid://pwgf5t00ymkd" path="res://PlayerAssets/scene.gltf" id="1_xhfnw"]
+[ext_resource type="PackedScene" uid="uid://b5igoixbcldgi" path="res://FillingBlock.tscn" id="2_okw4i"]
+[ext_resource type="AudioStream" uid="uid://b31nraukox44n" path="res://Sounds/place_sound.wav" id="4_qcf6d"]
+[ext_resource type="AudioStream" uid="uid://dowmaa8urw5tb" path="res://Sounds/217761__reitanna__break.wav" id="5_hoh8m"]
+[ext_resource type="AudioStream" uid="uid://fp8ijd0x14vf" path="res://Sounds/Mindustry OST, Day2.mp3" id="6_hoh8m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kpjcp"]
+size = Vector3(1.7294312, 3.0291748, 3.7886963)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_okw4i"]
+transparency = 1
+albedo_color = Color(0.30787233, 0.92752683, 0.87116176, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qcf6d"]
+custom_aabb = AABB(0, 10, 0, 0, 0, 0)
+size = Vector3(20, 20, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vypit"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1413380376]
+script = ExtResource("1_kpjcp")
+block_scene = ExtResource("2_okw4i")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=127238436]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.044770837, 0, -0.47095358)
+current = true
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=1069931893]
+target_position = Vector3(0, -0.5, -200)
+
+[node name="Model" parent="." unique_id=1375682399 instance=ExtResource("1_xhfnw")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=886131499]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0074157715, -0.41052246, 0.45928955)
+shape = SubResource("BoxShape3D_kpjcp")
+
+[node name="Hologram" type="MeshInstance3D" parent="." unique_id=776063801]
+material_override = SubResource("StandardMaterial3D_okw4i")
+transparency = 0.69
+cast_shadow = 0
+custom_aabb = AABB(0, 10, 0, 100, 100, 100)
+mesh = SubResource("BoxMesh_qcf6d")
+surface_material_override/0 = SubResource("StandardMaterial3D_vypit")
+
+[node name="PlaceSound" type="AudioStreamPlayer" parent="." unique_id=18929466]
+stream = ExtResource("4_qcf6d")
+
+[node name="BreakSound" type="AudioStreamPlayer" parent="." unique_id=1991849195]
+stream = ExtResource("5_hoh8m")
+volume_db = -7.308
+
+[node name="AmbientMusic" type="AudioStreamPlayer" parent="." unique_id=308814398]
+stream = ExtResource("6_hoh8m")
+volume_db = -9.995
+autoplay = true
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1058941408]
+
+[node name="Crosshair" type="ColorRect" parent="HUD" unique_id=94200877]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.5
+offset_top = -2.5
+offset_right = 2.5
+offset_bottom = 2.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

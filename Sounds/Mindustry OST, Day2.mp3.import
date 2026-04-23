@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://fp8ijd0x14vf"
+path="res://.godot/imported/Mindustry OST, Day2.mp3-2914631a7f595c75a1ddac6c1d2bcdb9.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Mindustry OST, Day2.mp3"
+dest_files=["res://.godot/imported/Mindustry OST, Day2.mp3-2914631a7f595c75a1ddac6c1d2bcdb9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

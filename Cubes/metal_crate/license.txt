@@ -1,0 +1,11 @@
+Model Information:
+* title:	Crate Cube Box Sci-fi (game ready)
+* source:	https://sketchfab.com/3d-models/crate-cube-box-sci-fi-game-ready-431ea190842f48a8a16d4fe9fac619af
+* author:	MrTomas (https://sketchfab.com/MrTomas)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Crate Cube Box Sci-fi (game ready)" (https://sketchfab.com/3d-models/crate-cube-box-sci-fi-game-ready-431ea190842f48a8a16d4fe9fac619af) by MrTomas (https://sketchfab.com/MrTomas) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
