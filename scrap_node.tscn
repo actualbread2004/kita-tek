@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://lkjy8585wklk"]
+
+[ext_resource type="PackedScene" uid="uid://b5igoixbcldgi" path="res://FillingBlock.tscn" id="1_rynyw"]
+[ext_resource type="PackedScene" uid="uid://c8prvxh8sct6u" path="res://large_crystal.tscn" id="2_mvr08"]
+
+[node name="ScrapNode" type="Node3D" unique_id=695518968]
+
+[node name="Block" parent="." unique_id=266673666 instance=ExtResource("1_rynyw")]
+
+[node name="Block2" parent="." unique_id=256238575 instance=ExtResource("1_rynyw")]
+transform = Transform3D(0.29999998, 0, 0, 0, 0.2368056, 0.18418224, 0, -0.18418224, 0.2368056, 0, 9.235483, -14.49769)
+
+[node name="Block12" parent="." unique_id=1141041477 instance=ExtResource("1_rynyw")]
+transform = Transform3D(0.27365962, -0.075468294, 0.0970306, 0, 0.2368056, 0.18418224, -0.12292437, -0.16801082, 0.21601379, -6.9416428, 4.067501, -8.234472)
+
+[node name="Block10" parent="." unique_id=1941409921 instance=ExtResource("1_rynyw")]
+transform = Transform3D(0.23764853, 0.11240846, -0.14452508, 0, 0.2368056, 0.18418224, 0.18309331, -0.14590214, 0.18758836, 12.579981, 14.792025, -11.080915)
+
+[node name="Block4" parent="." unique_id=2128509106 instance=ExtResource("1_rynyw")]
+transform = Transform3D(-0.06869385, -0.17928874, 0.23051398, 0, 0.2368056, 0.18418224, -0.29202935, 0.042173956, -0.054223627, -15.685205, 9.235483, -0.13264751)
+
+[node name="Block11" parent="." unique_id=2021377087 instance=ExtResource("1_rynyw")]
+transform = Transform3D(-0.06869385, -0.17928874, 0.23051398, 0.04913351, 0.22633414, 0.19067968, -0.28786632, 0.08141494, -0.022462264, 10.742636, 7.101053, 14.456313)
+
+[node name="Block5" parent="." unique_id=1247327229 instance=ExtResource("1_rynyw")]
+transform = Transform3D(-0.043944046, 0.18219557, -0.23425134, -1.2855206e-10, 0.2368056, 0.18418224, 0.29676405, 0.02697904, -0.03468732, 14.754402, 9.235483, -0.13264751)
+
+[node name="Block6" parent="." unique_id=1122084127 instance=ExtResource("1_rynyw")]
+transform = Transform3D(0.21485932, -0.085178904, -0.19125903, -0.04137047, 0.25137472, -0.15842733, 0.20524117, 0.13984023, 0.16828774, 10.836891, 19.656221, 3.90759)
+
+[node name="Block7" parent="." unique_id=238986794 instance=ExtResource("1_rynyw")]
+transform = Transform3D(0.09215885, -0.26451865, 0.10740864, 0.19845098, -0.02178491, -0.22392547, 0.20524117, 0.13984023, 0.16828774, 0.51820374, 22.207129, 3.2476969)
+
+[node name="Block13" parent="." unique_id=1865542543 instance=ExtResource("1_rynyw")]
+transform = Transform3D(-0.1785066, -0.1969892, -0.13903475, 0.13871887, 0.05758784, -0.25969347, 0.19721171, -0.21881245, 0.05682101, -6.9621506, 7.0034523, 9.477752)
+
+[node name="Block14" parent="." unique_id=646591563 instance=ExtResource("1_rynyw")]
+transform = Transform3D(-0.18194011, -0.080102205, 0.2246807, -0.21864553, 0.16896257, -0.11681513, -0.09535165, -0.23459604, -0.16085026, -6.9621506, 21.179623, 5.260581)
+
+[node name="Block9" parent="." unique_id=695474907 instance=ExtResource("1_rynyw")]
+transform = Transform3D(0.081908956, -0.28743035, -0.025975872, 0.1962276, 0.07526587, -0.21407895, 0.2116262, 0.041459315, 0.20855571, 4.482089, 21.23322, -9.67446)
+
+[node name="Block8" parent="." unique_id=244720978 instance=ExtResource("1_rynyw")]
+transform = Transform3D(0.09215885, -0.26451868, 0.10740865, 0.2672561, 0.11962651, 0.065296635, -0.10040366, 0.07562653, 0.27239627, -6.274091, 20.30238, -7.836074)
+
+[node name="Block3" parent="." unique_id=1823018804 instance=ExtResource("1_rynyw")]
+transform = Transform3D(0.29999998, 0, 0, 0, 0.2308633, -0.19157797, 0, 0.19157797, 0.2308633, 0, 9.235483, 15.199797)
+
+[node name="LargeCrystal" parent="." unique_id=1411425282 instance=ExtResource("2_mvr08")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 2.543972, 11.939087, -3.2484584)

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://djoqrh41885kw"]
+
+[ext_resource type="PackedScene" uid="uid://dgu86v3felh0p" path="res://factory_machine.glb" id="1_d74vx"]
+[ext_resource type="Script" uid="uid://c53ehhwlpd6df" path="res://gem_processor.gd" id="2_x0t1t"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r68lg"]
+size = Vector3(0.7832031, 0.44769287, 0.5722351)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t4xpm"]
+size = Vector3(3.1738892, 3.081665, 5.161499)
+
+[node name="GemProcessor" type="Node3D" unique_id=2004325993]
+
+[node name="Model" parent="." unique_id=1737132016 instance=ExtResource("1_d74vx")]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1886616288]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.006215656, 0.81760126, 2.6151717)
+script = ExtResource("2_x0t1t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=496911600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02435876, -0.27615356, -0.21388245)
+shape = SubResource("BoxShape3D_r68lg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2043843444]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.041656494, 1.0408325, -0.2748413)
+shape = SubResource("BoxShape3D_t4xpm")
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

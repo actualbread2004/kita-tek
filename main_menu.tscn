@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://bsw22dgpgqyvw"]
+
+[ext_resource type="Script" uid="uid://c8c1ycai1cawf" path="res://main_menu.gd" id="1_jix8l"]
+[ext_resource type="Texture2D" uid="uid://378fmef4qg2a" path="res://background.jpg" id="2_glbon"]
+[ext_resource type="Texture2D" uid="uid://dkdoyfsalmumq" path="res://icon_newgame-removebg-preview (2).png" id="2_jix8l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlkkf"]
+bg_color = Color(0.08627451, 0.2784314, 0.09803922, 1)
+skew = Vector2(0.36, 0)
+border_width_right = 45
+border_color = Color(0.08627451, 0.2784314, 0.13333334, 1)
+shadow_size = 11
+shadow_offset = Vector2(11.63, 10.04)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fu7sn"]
+bg_color = Color(0.08627451, 0.41568628, 0.13333334, 1)
+skew = Vector2(0.36, 0)
+border_width_right = 45
+border_color = Color(0.08627451, 0.41568628, 0.13333334, 1)
+shadow_size = 11
+shadow_offset = Vector2(11.63, 10.04)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jix8l"]
+bg_color = Color(0.08627451, 0.42352942, 0.13333334, 1)
+skew = Vector2(0.36, 0)
+border_width_right = 45
+border_color = Color(0.08627451, 0.42352942, 0.13333334, 1)
+shadow_size = 11
+shadow_offset = Vector2(11.63, 10.04)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glbon"]
+bg_color = Color(0.08627451, 0.41568628, 0.13333334, 1)
+skew = Vector2(0.36, 0)
+border_width_right = 45
+border_color = Color(0.08627451, 0.41568628, 0.13333334, 1)
+shadow_size = 11
+shadow_offset = Vector2(11.63, 10.04)
+
+[node name="MainMenu" type="Control" unique_id=2080895867]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jix8l")
+
+[node name="BackgroundImg" type="TextureRect" parent="." unique_id=224458354]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_glbon")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=459196478]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -238.5
+offset_top = -92.0
+offset_right = 238.5
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+
+[node name="NewGameBtn" type="Button" parent="VBoxContainer" unique_id=1064375898]
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 340.75
+theme_override_colors/font_color = Color(0.95617026, 0.82397145, 7.70092e-07, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_nlkkf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fu7sn")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_jix8l")
+text = "NEW GAME"
+icon = ExtResource("2_jix8l")
+autowrap_mode = 2
+autowrap_trim_flags = 0
+
+[node name="ExitBtn" type="Button" parent="VBoxContainer" unique_id=1778294863]
+layout_mode = 2
+size_flags_vertical = 10
+size_flags_stretch_ratio = 156.55
+theme_override_colors/font_color = Color(0.78431374, 0, 0.19215687, 1)
+theme_override_constants/outline_size = 4
+theme_override_constants/align_to_largest_stylebox = 10
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_nlkkf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_glbon")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_jix8l")
+text = "EXIT
+"
+autowrap_mode = 2
+autowrap_trim_flags = 0
+expand_icon = true
+
+[connection signal="pressed" from="VBoxContainer/NewGameBtn" to="." method="_on_new_game_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitBtn" to="." method="_on_exit_btn_pressed"]

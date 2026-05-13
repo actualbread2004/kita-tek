@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://78m85d3aguct"]
 
 [ext_resource type="PackedScene" uid="uid://bfc5unpyfeoge" path="res://TestingRoom/scene.gltf" id="1_wbfu4"]
+[ext_resource type="Texture2D" uid="uid://jx3pd8bnea7d" path="res://Cubes/metal_plate_02_diff_4k.jpg" id="2_t88pq"]
 [ext_resource type="PackedScene" uid="uid://dqwn6c8itr4x8" path="res://PlayerAssets/Player.tscn" id="2_xkndl"]
-[ext_resource type="PackedScene" uid="uid://c6gja684cwy3v" path="res://Cubes/spatial_cube/scene.gltf" id="3_u44n3"]
-[ext_resource type="PackedScene" uid="uid://dkhqt6j1eoaq2" path="res://Cubes/cube_key_hole/scene.gltf" id="4_sb48q"]
+[ext_resource type="PackedScene" uid="uid://jd2y7a84y3r7" path="res://tutorial_finish_hole.tscn" id="5_r0x5m"]
 [ext_resource type="PackedScene" uid="uid://cdk4igsxplot2" path="res://Cubes/OldPhysicsCube.tscn" id="5_t88pq"]
+[ext_resource type="PackedScene" uid="uid://lkjy8585wklk" path="res://scrap_node.tscn" id="6_r0x5m"]
+[ext_resource type="PackedScene" uid="uid://djoqrh41885kw" path="res://gem_processor.tscn" id="7_3mrqo"]
 
 [sub_resource type="MeshTexture" id="MeshTexture_xkndl"]
 
@@ -12,32 +14,82 @@
 normal_enabled = true
 normal_texture = SubResource("MeshTexture_xkndl")
 
-[node name="Node3D" type="Node3D" unique_id=2108783288]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t88pq"]
+albedo_color = Color(1, 1, 1, 0)
+albedo_texture = ExtResource("2_t88pq")
 
-[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1179303176]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 208.5274, -18.04728)
-layers = 1023
-light_color = Color(0.39836255, 0.5675967, 0.58763933, 1)
-light_energy = 6.0
-light_indirect_energy = 2.0
+[sub_resource type="MeshLibrary" id="MeshLibrary_3mrqo"]
+
+[node name="Root" type="Node3D" unique_id=2108783288]
 
 [node name="TestingRoom" parent="." unique_id=2012575106 instance=ExtResource("1_wbfu4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.001, -2, -0.122)
 
 [node name="InvisFloor" type="CSGBox3D" parent="TestingRoom" unique_id=1957360959]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1834106, 3.6792333, 1.4136047)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.183, 3.6, 1.414)
 material_override = SubResource("StandardMaterial3D_sb48q")
 use_collision = true
 collision_layer = 65535
 size = Vector3(1111.8125, 0.60510254, 1094.1523)
 
-[node name="CharacterBody3D" parent="." unique_id=1413380376 instance=ExtResource("2_xkndl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84.728455, 65.705635, 244.87477)
+[node name="TutorialWall4" type="CSGBox3D" parent="TestingRoom" unique_id=744346135 groups=["TutorialElements"]]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 67.45521, 72, -13)
+use_collision = true
+size = Vector3(356.126, 600, 1)
+material = SubResource("StandardMaterial3D_t88pq")
 
-[node name="Sketchfab_Scene" parent="." unique_id=1962508906 instance=ExtResource("3_u44n3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.49866, 152.18242, 12.815475)
+[node name="TutorialWall3" type="CSGBox3D" parent="TestingRoom" unique_id=280964892 groups=["TutorialElements"]]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -102.63107, 72, 13)
+use_collision = true
+size = Vector3(356.126, 600, 1)
+material = SubResource("StandardMaterial3D_t88pq")
 
-[node name="Sketchfab_Scene2" parent="." unique_id=1636547829 instance=ExtResource("4_sb48q")]
-transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 87.84745, 81.39475, -132.62627)
+[node name="TutorialWall2" type="CSGBox3D" parent="TestingRoom" unique_id=706919234 groups=["TutorialElements"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4147797, 72, -82.74874)
+use_collision = true
+size = Vector3(362.95557, 600, 1)
+material = SubResource("StandardMaterial3D_t88pq")
 
-[node name="OldBasicCube" parent="." unique_id=1382317070 instance=ExtResource("5_t88pq")]
-transform = Transform3D(10.075, 0, 0, 0, 10.075, 0, 0, 0, 10.075, -230.31232, 58.489685, -11.555096)
+[node name="TutorialWall1" type="CSGBox3D" parent="TestingRoom" unique_id=349959780 groups=["TutorialElements"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 72, 86.72068)
+use_collision = true
+size = Vector3(356.126, 600, 1)
+material = SubResource("StandardMaterial3D_t88pq")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=624679690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.028259, 299.45746, 10.901669)
+light_energy = 0.488
+light_indirect_energy = 3.453
+
+[node name="Player" parent="." unique_id=1413380376 instance=ExtResource("2_xkndl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.477478, 293.83734, 72.47937)
+
+[node name="TutorialFinishHole" parent="." unique_id=2025672429 groups=["TutorialElements"] instance=ExtResource("5_r0x5m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4881115, 179.14998, 9.556402)
+
+[node name="OldPhysicsCube" parent="." unique_id=1382317070 groups=["TutorialElements"] instance=ExtResource("5_t88pq")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -21.28119, 45.206985, 4.4808493)
+
+[node name="GridMap" type="GridMap" parent="." unique_id=1503321325]
+mesh_library = SubResource("MeshLibrary_3mrqo")
+
+[node name="ScrapNode" parent="." unique_id=695518968 instance=ExtResource("6_r0x5m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -382.0694, 13.764092, 243.09406)
+
+[node name="ScrapNode2" parent="." unique_id=2122739878 instance=ExtResource("6_r0x5m")]
+transform = Transform3D(0.5692077, 0, 0.82219374, 0, 1, 0, -0.82219374, 0, 0.5692077, 71.63071, 13.764092, 462.85278)
+
+[node name="ScrapNode3" parent="." unique_id=463656097 instance=ExtResource("6_r0x5m")]
+transform = Transform3D(-0.49561033, 0, 0.86854494, 0, 1, 0, -0.86854494, 0, -0.49561033, 362.47446, 13.764092, 287.11322)
+
+[node name="ScrapNode4" parent="." unique_id=1972310130 instance=ExtResource("6_r0x5m")]
+transform = Transform3D(-0.49561033, 0, 0.86854494, 0, 1, 0, -0.86854494, 0, -0.49561033, 484.1372, 13.764092, -9.161499)
+
+[node name="ScrapNode5" parent="." unique_id=1472123750 instance=ExtResource("6_r0x5m")]
+transform = Transform3D(-0.49561033, 0, 0.86854494, 0, 1, 0, -0.86854494, 0, -0.49561033, 23.286926, 13.764092, -484.73462)
+
+[node name="ScrapNode6" parent="." unique_id=1707825231 instance=ExtResource("6_r0x5m")]
+transform = Transform3D(-0.49561033, 0, 0.86854494, 0, 1, 0, -0.86854494, 0, -0.49561033, -369.94528, 13.764092, -280.48322)
+
+[node name="GemProcessor" parent="." unique_id=2004325993 instance=ExtResource("7_3mrqo")]
+transform = Transform3D(-6.5567076e-07, 0, 14.999999, 0, 14.999999, 0, -14.999999, 0, -6.5567076e-07, -513.6821, 1.9943218, -0.0814414)

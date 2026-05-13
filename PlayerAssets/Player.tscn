@@ -6,6 +6,8 @@
 [ext_resource type="AudioStream" uid="uid://b31nraukox44n" path="res://Sounds/place_sound.wav" id="4_qcf6d"]
 [ext_resource type="AudioStream" uid="uid://dowmaa8urw5tb" path="res://Sounds/217761__reitanna__break.wav" id="5_hoh8m"]
 [ext_resource type="AudioStream" uid="uid://fp8ijd0x14vf" path="res://Sounds/Mindustry OST, Day2.mp3" id="6_hoh8m"]
+[ext_resource type="Texture2D" uid="uid://c2qy8iisceuij" path="res://PlayerAssets/hand_icon-removebg-preview (1) (1).png" id="7_er5lv"]
+[ext_resource type="Script" uid="uid://6h16hafdl6j6" path="res://PlayerAssets/money_counter.gd" id="8_srqhs"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kpjcp"]
 size = Vector3(1.7294312, 3.0291748, 3.7886963)
@@ -20,16 +22,32 @@ size = Vector3(20, 20, 20)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vypit"]
 
-[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1413380376]
+[node name="Player" type="CharacterBody3D" unique_id=1413380376 groups=["Player"]]
 script = ExtResource("1_kpjcp")
 block_scene = ExtResource("2_okw4i")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=127238436]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.044770837, 0, -0.47095358)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.62)
 current = true
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=1069931893]
 target_position = Vector3(0, -0.5, -200)
+
+[node name="PickupRaycast" type="RayCast3D" parent="Camera3D" unique_id=318226119]
+target_position = Vector3(0, -5, -100)
+
+[node name="HoldPosition" type="Marker3D" parent="Camera3D" unique_id=749044522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20.393167)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D" unique_id=2123091125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1130255)
+light_energy = 16.0
+light_indirect_energy = 15.12
+light_volumetric_fog_energy = 4.28
+light_size = 1.0
+spot_range = 4096.0
+spot_attenuation = 0.7
+spot_angle = 70.93
 
 [node name="Model" parent="." unique_id=1375682399 instance=ExtResource("1_xhfnw")]
 
@@ -38,6 +56,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0074157715, -0.41052246, 0
 shape = SubResource("BoxShape3D_kpjcp")
 
 [node name="Hologram" type="MeshInstance3D" parent="." unique_id=776063801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20.546402)
 material_override = SubResource("StandardMaterial3D_okw4i")
 transparency = 0.69
 cast_shadow = 0
@@ -72,3 +91,30 @@ offset_bottom = 2.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="HandIcon" type="TextureRect" parent="HUD" unique_id=18439639]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.25
+offset_top = -28.25
+offset_right = 28.25
+offset_bottom = 28.25
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_er5lv")
+expand_mode = 1
+
+[node name="MoneyCounter" type="Label" parent="HUD" unique_id=907033129]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = 33.0
+offset_right = -49.0
+offset_bottom = 56.0
+grow_horizontal = 0
+text = "Money: 0"
+script = ExtResource("8_srqhs")
