@@ -6,12 +6,10 @@
 [ext_resource type="AudioStream" uid="uid://dowmaa8urw5tb" path="res://Sounds/217761__reitanna__break.wav" id="5_hoh8m"]
 [ext_resource type="AudioStream" uid="uid://fp8ijd0x14vf" path="res://Sounds/Mindustry OST, Day2.mp3" id="6_hoh8m"]
 [ext_resource type="Texture2D" uid="uid://c2qy8iisceuij" path="res://PlayerAssets/hand_icon-removebg-preview (1) (1).png" id="7_er5lv"]
-[ext_resource type="Script" uid="uid://cxiqot0l2qcra" path="res://PlayerAssets/objective_text.gd" id="8_cyqb6"]
 [ext_resource type="Script" uid="uid://6h16hafdl6j6" path="res://PlayerAssets/money_counter.gd" id="8_srqhs"]
 [ext_resource type="Script" uid="uid://82n4yqggintd" path="res://PlayerAssets/timer.gd" id="9_sw074"]
 [ext_resource type="Script" uid="uid://bow8g6jrkqpsy" path="res://PlayerAssets/pause_menu.gd" id="10_cyqb6"]
-[ext_resource type="Script" uid="uid://brqwqcbedmg64" path="res://upgradeDrone.gd" id="10_ssidq"]
-[ext_resource type="Script" uid="uid://birtviijhnbul" path="res://PlayerAssets/upgradeProcessor.gd" id="11_ssidq"]
+[ext_resource type="Script" uid="uid://pwue45bmnhgv" path="res://PlayerAssets/upgrades.gd" id="10_vd6we"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kpjcp"]
 size = Vector3(1.7294312, 3.0291748, 3.7886963)
@@ -101,10 +99,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -40.125
-offset_top = -40.125
-offset_right = 40.125
-offset_bottom = 40.125
+offset_left = -28.25
+offset_top = -28.25
+offset_right = 28.25
+offset_bottom = 28.25
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("7_er5lv")
@@ -114,17 +112,17 @@ expand_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -176.0
+offset_left = -118.0
 offset_top = 61.0
-offset_right = -25.0
-offset_bottom = 116.0
+offset_right = -24.0
+offset_bottom = 96.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 25
 text = "Score: 0"
 script = ExtResource("8_srqhs")
 
@@ -132,64 +130,48 @@ script = ExtResource("8_srqhs")
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -509.0
-offset_top = 8.0
-offset_right = -22.0
-offset_bottom = 121.0
+offset_left = -327.0
+offset_top = 20.0
+offset_right = -21.0
+offset_bottom = 93.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 40
-text = "Objective: Put the cube in the finish hole
+theme_override_font_sizes/font_size = 25
+text = "Objective: Get 2000 score
 "
-script = ExtResource("8_cyqb6")
 
 [node name="Timer" type="Label" parent="HUD" unique_id=1166227329]
-offset_left = 8.0
-offset_top = 4.0
-offset_right = 199.0
-offset_bottom = 59.0
+offset_left = 19.0
+offset_top = 15.0
+offset_right = 162.0
+offset_bottom = 57.0
 theme_override_colors/font_color = Color(0.9950809, 0.9365629, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 30
 text = "Time left: "
 script = ExtResource("9_sw074")
 
-[node name="UpgradeDroneText" type="Label" parent="HUD" unique_id=254436689]
+[node name="Upgrades" type="Label" parent="HUD" unique_id=254436689]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 15.0
-offset_top = -60.0
-offset_right = 160.0
+offset_left = 17.0
+offset_top = -34.0
+offset_right = 57.0
 offset_bottom = -11.0
 grow_vertical = 0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 25
 text = "Upgrade"
-script = ExtResource("10_ssidq")
-
-[node name="UpgradeProcessorText" type="Label" parent="HUD" unique_id=435680328]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 15.0
-offset_top = -169.0
-offset_right = 160.0
-offset_bottom = -120.0
-grow_vertical = 0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 35
-text = "Upgrade"
-script = ExtResource("11_ssidq")
+script = ExtResource("10_vd6we")
 
 [node name="HintText" type="Label" parent="HUD" unique_id=319472041]
 anchors_preset = 8
@@ -197,55 +179,27 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -94.0
-offset_top = 37.0
-offset_right = 91.0
-offset_bottom = 68.0
+offset_left = -20.0
+offset_top = 26.0
+offset_right = 20.0
+offset_bottom = 49.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 22
 text = "Press E to pick up"
 
 [node name="BlackBackground" type="ColorRect" parent="HUD" unique_id=15236451]
 process_mode = 3
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0, 0, 0, 0.8627451)
+color = Color(0, 0, 0, 1)
 script = ExtResource("10_cyqb6")
-
-[node name="Controls" type="Label" parent="HUD/BlackBackground" unique_id=1538414457]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -304.0
-offset_top = -197.0
-offset_right = -9.0
-offset_bottom = -10.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 1
-theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 32
-text = "Controls:
-WASD  - Movement
-Left click - Break blocks
-Space  - Fly up
-LSHIFT - Fly down
-E  - Pick up certain items
-Q - Drop item
-X  - Upgrade Drone
-Z  - Upgrade Processor"
 
 [node name="CenterContainer" type="CenterContainer" parent="HUD/BlackBackground" unique_id=1943258074]
 layout_mode = 1
@@ -261,29 +215,21 @@ layout_mode = 2
 mouse_filter = 2
 
 [node name="ContinueBtn" type="Button" parent="HUD/BlackBackground/CenterContainer/VBoxContainer" unique_id=832551968]
-custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
 text = "CONTINUE
 "
 
 [node name="RestartBtn" type="Button" parent="HUD/BlackBackground/CenterContainer/VBoxContainer" unique_id=1615309344]
-custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
 text = "RESTART
 "
 
 [node name="ExitBtn" type="Button" parent="HUD/BlackBackground/CenterContainer/VBoxContainer" unique_id=811349911]
-custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
 text = "EXIT
 "
 
-[node name="MuteCheckBox" type="CheckBox" parent="HUD/BlackBackground/CenterContainer/VBoxContainer" unique_id=1869579844]
-custom_minimum_size = Vector2(200, 50)
+[node name="CheckBox" type="CheckBox" parent="HUD/BlackBackground/CenterContainer/VBoxContainer" unique_id=1869579844]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
 text = "MUTE SOUND
 "

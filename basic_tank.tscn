@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://begt4153vftec"]
-
-[ext_resource type="PackedScene" uid="uid://cajabelobjs23" path="res://Enemies/BasicTank/simple_tank.glb" id="1_qxkms"]
-
-[node name="BasicTank" type="Node3D" unique_id=1282245204 groups=["Enemy"]]
-
-[node name="Model" parent="." unique_id=1149018202 instance=ExtResource("1_qxkms")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)

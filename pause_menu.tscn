@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://b0ox4w0isdaq0"]
+
+[ext_resource type="Script" uid="uid://bq14u5c7hxh2o" path="res://pause_menu.gd" id="1_hdmo1"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=315411161]
+process_mode = 3
+script = ExtResource("1_hdmo1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=29935774]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2007505414]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=503258978]
+layout_mode = 2
+
+[node name="ContinueBtn" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1740595790]
+layout_mode = 2
+text = "CONTINUE
+"
+
+[node name="RestartBtn" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1565303096]
+layout_mode = 2
+text = "RESTART
+"
+
+[node name="ExitBtn" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1384467283]
+layout_mode = 2
+text = "EXIT
+"
+
+[node name="CheckBox" type="CheckBox" parent="CenterContainer/VBoxContainer" unique_id=204694712]
+layout_mode = 2
+text = "MUTE SOUND
+"
